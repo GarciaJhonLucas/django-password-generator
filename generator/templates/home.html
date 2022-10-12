@@ -1,0 +1,72 @@
+{% extends 'layout.html' %}
+
+{% block contend %}
+    <div class="px-2 py-4 my-3 text-center">
+        <h4 class="display-5 fw-bold">Password Generator</h4>
+    </div>
+
+    <div class="text-start" id="group">
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    Generate password form:
+                </div>
+                <div class="card-body">
+                    <form action="password" id="user_form">
+
+                        <div class="col">
+                            <label for="length" class="form-label">Select the length of your
+                                password:</label>
+                            <select class="form-select" name="length" aria-label="Default select example">
+                                <option value="6" selected>6 Characters</option>
+                                <option value="12">12 Characters</option>
+                                <option value="17">18 Characters</option>
+                                <option value="25">25 Characters</option>
+                                <option value="37">37 Characters</option>
+                                <option value="50">50 Characters</option>
+                            </select>
+                        </div><br>
+
+                        <div class="col">
+                            <div class="row">
+                                <label for="" class="form-label">Options:</label>
+                                <div class="col-sm-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="uppercase" id="uppercase">
+                                        <label class="form-check-label" for="uppercase">
+                                            Uppercase
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="characters"
+                                            id="characters">
+                                        <label class="form-check-label" for="characters">
+                                            Characters
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="numbers" id="numbers">
+                                        <label class="form-check-label" for="numbers">
+                                            Numbers
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><br>
+                        <div class="col">
+                            <label for="especial" class="form-label">Especial characters:</label>
+                            <input type="text" class="form-control" name="especial" placeholder="ñ+%¡?">
+                        </div><br>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary btn-sm btn-lg">Generate</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
